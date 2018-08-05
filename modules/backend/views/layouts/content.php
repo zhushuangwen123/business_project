@@ -39,13 +39,13 @@ use dmstr\widgets\Alert;
     </section>
 </div>
 
-<footer class="main-footer">
-    <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0
-    </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://yiicms.co">YiiCms</a>.</strong> All rights
-    reserved.
-</footer>
+<!--<footer class="main-footer">-->
+<!--    <div class="pull-right hidden-xs">-->
+<!--        <b>Version</b> 1.0-->
+<!--    </div>-->
+<!--    <strong>Copyright &copy; 2014-2015 <a href="http://yiicms.co">YiiCms</a>.</strong> All rights-->
+<!--    reserved.-->
+<!--</footer>-->
 
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark" style="height: auto">

@@ -96,27 +96,9 @@ if(!empty(Yii::$app->params['logo'])){
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">&copy; YiiCms <?= date('Y') ?> 版权所有 侵权必究</div>
+            <div class="col-lg-12">&copy; 底层采用YiiCms开源源码 <?= date('Y') ?> </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3">
-                <ul>
-                    <li><a href="<?=Url::to(['/backend'])?>" target="_blank">后台演示</a></li>
-                    <li><a href="http://git.oschina.net/templi/yiicms" target="_blank">源码下载</a></li>
-                    <li><a href="https://github.com/yongshengli/yiicms" target="_blank">github下载</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3">
-                友情链接
-                <?=\app\widgets\Blogroll::widget()?>
-            </div>
-            <div class="col-lg-3">
-                QQ群:248898849
-            </div>
-            <div class="col-lg-3">
-                <p>技术支持<a href="http://www.zbeijing.com.cn">在北京网络科技</a> <?= \app\widgets\Hook::widget(['configName'=>'tongji']); ?></p>
-            </div>
-        </div>
+
     </div>
 </footer>
 <?php $this->endBody() ?>

@@ -62,6 +62,7 @@ class ProductsController extends Controller
     public function actionList()
     {
         $categoryId = Yii::$app->request->get('category-id');
+        //print_r($categoryId);die;
         $query = Products::find()->where(['status'=>Products::STATUS_ENABLE]);
         if($categoryId){
             $query->andWhere(['category_id'=>$categoryId]);

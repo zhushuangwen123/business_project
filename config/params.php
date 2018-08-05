@@ -54,10 +54,10 @@
         {
             "label": "案例",
             "url": [
-                "/case/list"
+                "/cases/list"
             ],
             "activeUrls": [
-                "/case/index"
+                "/cases/index"
             ]
         },
         {

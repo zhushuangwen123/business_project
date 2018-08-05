@@ -53,7 +53,8 @@ $fieldOptions2 = [
         <?php ActiveForm::end(); ?>
 
         <div class="social-auth-links">
-            You may login with <strong>demo/demo</strong>.<br>
+<!--            You may login with <strong>demo/demo</strong>.<br>-->
+            如果你没有账号，请联系  <strong>yingqun</strong>.<br>
         </div>
     </div>
 </div>
