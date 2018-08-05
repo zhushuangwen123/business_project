@@ -62,12 +62,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div>
                                 <?=$model->detail->params?>
                             </div>
-                            <div style="margin-top: 15px">
-                                在线咨询:
-                                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?= \app\widgets\Hook::widget(['configName'=>'qq_number'])?\app\widgets\Hook::widget(['configName'=>'qq_number']):'739800600';?>&site=qq&menu=yes">
-                                    <img border="0" src="http://wpa.qq.com/pa?p=2:739800600:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,17 +93,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?=\app\widgets\Category::widget(['type'=>\app\models\Content::TYPE_PRODUCTS,
                     'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>
+                <?=\app\widgets\LastCases::widget(['options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
+                                                 ])?>
                 <?=\app\widgets\LastNews::widget(['options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>
                 <?=\app\widgets\ConfigPanel::widget(['configName'=>'contact_us',
                     'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>
-                <?=\app\widgets\ConfigPanel::widget(['configName'=>'donate',
-                    'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
-                ])?>
-                <?=\app\widgets\ConfigPanel::widget(['configName'=>'gongyishipin',
-                    'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
-                ])?>
+
             </div>
         </div>
     </div>

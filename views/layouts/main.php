@@ -99,6 +99,8 @@ if(!empty(Yii::$app->params['logo'])){
             <div class="col-lg-12">&copy; 底层采用YiiCms开源源码 <?= date('Y') ?> </div>
         </div>
 
+
+
     </div>
 </footer>
 <?php $this->endBody() ?>

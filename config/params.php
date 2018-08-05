@@ -27,7 +27,7 @@
  return array (
   'appName' => '大连豪特节能有限公司',
   'logo' => '@web/images/logo.png',
-  'keywords' => '',
+  'keywords' => '燃气锅炉，节能锅炉，豪特节能',
   'description' => '',
   'cacheDuration' => '-1',
   'pageSize' => '2',

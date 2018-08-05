@@ -37,7 +37,7 @@ class Content extends AppActiveRecord
     /** 照片相册 */
     const TYPE_PHOTOS =4;
 
-    /** 照片相册 */
+    /** 案例 */
     const TYPE_CASE =5;
 
     /** @var array  */

@@ -23,10 +23,9 @@ $this->params['breadcrumbs'][] = $this->title;
             ])?>
             <?=\app\widgets\LastNews::widget(['options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
             ])?>
+            <?=\app\widgets\LastCases::widget(['options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
+                                             ])?>
             <?=\app\widgets\ConfigPanel::widget(['configName'=>'contact_us',
-                'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
-            ])?>
-            <?=\app\widgets\ConfigPanel::widget(['configName'=>'donate',
                 'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
             ])?>
         </div>
