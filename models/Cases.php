@@ -15,5 +15,5 @@ use Yii;
 
 class Cases extends Content
 {
-    static $currentType = Parent::TYPE_CASE;
+    static $currentType = Content::TYPE_CASE;
 }

@@ -17,7 +17,7 @@ use Yii;
  */
 class Blogroll extends Ad
 {
-    static $currentType = Parent::TYPE_BLOGROLL;
+    static $currentType = Ad::TYPE_BLOGROLL;
 
     /**
      * @param bool $runValidation

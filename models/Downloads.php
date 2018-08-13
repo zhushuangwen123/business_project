@@ -21,7 +21,7 @@ use yii\db\ActiveRecord;
  */
 class Downloads extends Content
 {
-    static $currentType = Parent::TYPE_DOWNLOADS;
+    static $currentType = Content::TYPE_DOWNLOADS;
 
     /**
      * @return \app\models\ContentDetail|ActiveRecord
