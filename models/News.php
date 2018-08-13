@@ -15,5 +15,5 @@ use Yii;
 
 class News extends Content
 {
-    static $currentType = Parent::TYPE_NEWS;
+    static $currentType = Content::TYPE_NEWS;
 }
