@@ -24,8 +24,8 @@ class CategoryHelper extends Object
      */
     public function init()
     {
-        $this->_categoriesMap = array_column($this->categories, null, 'id');
-        foreach($this->categories as &$item){
+        $this->_categoriesMap = self::_array_column($this->categories, null, 'id');
+	foreach($this->categories as &$item){
             $item['pname'] = $this->getCategory($item['id'], 'name');
             $item['full_pname'] = $this->getFullParentName($item['path']);
             $item['full_name'] = $this->getFullName($item['full_pname'],$item['name']);
@@ -34,13 +34,34 @@ class CategoryHelper extends Object
         }
     }
 
+public static function _array_column(array $array, $column_key, $index_key=null){
+    $result = [];
+    foreach($array as $arr) {
+        if(!is_array($arr)) continue;
+
+        if(is_null($column_key)){
+            $value = $arr;
+        }else{
+            $value = $arr[$column_key];
+        }
+
+        if(!is_null($index_key)){
+            $key = $arr[$index_key];
+            $result[$key] = $value;
+        }else{
+            $result[] = $value;
+        }
+    }
+    return $result; 
+}
+
     /**
      * 获取KV格式
      * @return array
      */
     public function getKV()
     {
-        return array_column($this->_categoriesMap, 'full_name', 'id');
+        return self::_array_column($this->_categoriesMap, 'full_name', 'id');
     }
     /**
      * 取树形结构结果

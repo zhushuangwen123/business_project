@@ -24,7 +24,7 @@ use kartik\file\FileInput;
         </div>
     </div>
     <?= $form->field($model, 'imageFile')->widget(
-        FileInput::class,
+        'kartik\file\FileInput',
         [
             'pluginOptions' => [
                 'showUpload' => false,

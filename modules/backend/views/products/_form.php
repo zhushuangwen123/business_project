@@ -17,7 +17,7 @@ use kartik\file\FileInput;
     <?= $form->field($model, 'description')->textarea() ?>
 
     <?= $form->field($model, 'imageFile')->widget(
-        FileInput::class,
+        'kartik\file\FileInput',
         [
             'pluginOptions' => [
                 'showUpload' => false,

@@ -17,7 +17,8 @@ use app\modules\backend\grid\DataColumn;
  */
 class GridView extends YiiGridView
 {
-    public $dataColumnClass = DataColumn::Class;
+    public $dataColumnClass = 'app\modules\backend\grid\DataColumn';
+    //public $dataColumnClass = DataColumn::Class;
     /**
      * @var string the layout that determines how different sections of the list view should be organized.
      * The following tokens will be replaced with the corresponding section contents:
