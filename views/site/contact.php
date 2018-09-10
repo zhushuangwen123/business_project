@@ -19,9 +19,9 @@ empty($model) && $model = new Feedback();
         <div class="col-lg-9">
             <div class="panel-body">
                 <p><font size="4">联系人: 王经理</font></p>
-                <p><font size="4">电话:13644273918</font></p>
-                <p><font size="4">E-mail: 383448528@qq.com</font></p>
-                <p><font size="4">地址: 辽宁省自由贸易试验区大连保税区海富路9-1号</font></p>
+                <p><font size="4">电话: 13644273918</font></p>
+                <p><font size="4">E-mail: haotekeji@126.cn</font></p>
+                <p><font size="4">地址: 辽宁省大连经济开发区东北七街18号</font></p>
             </div>
         </div>
         <div class="col-lg-3">
