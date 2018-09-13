@@ -54,6 +54,7 @@ if(!empty(Yii::$app->params['logo'])){
     </script>
 </head>
 <body  class="skin-blue fixed">
+<?php include_once("baidu_js_push.php") ?>
 <?php $this->beginBody() ?>
 <div class="wrap">
     <div class="main-header">
