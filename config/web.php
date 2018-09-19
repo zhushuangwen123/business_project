@@ -51,7 +51,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),
+        'db' => require(__DIR__ . '/'.((YII_ENV == 'prod') ? 'db.php' : 'dev_db.php')),
         'urlManager' => [
             'suffix'=>'.html',
             'enablePrettyUrl' => true,
@@ -95,13 +95,13 @@ $config = [
         'backend' => [
             'class' => 'app\modules\backend\Module',
         ],
-	'debug' => [
-            'class' => 'yii\debug\Module',
-            'allowedIPs' =>              ['127.0.0.1','106.12.8.248','192.168.0.104'],
+        'debug'   => [
+            'class'      => 'yii\debug\Module',
+            'allowedIPs' => ['127.0.0.1', '106.12.8.248', '192.168.0.104'],
         ],
-        'gii' => [
-            'class' => 'yii\gii\Module',
-	    'allowedIPs' =>              ['127.0.0.1','106.12.8.248','192.168.0.104'],
+        'gii'     => [
+            'class'      => 'yii\gii\Module',
+            'allowedIPs' => ['127.0.0.1', '106.12.8.248', '192.168.0.104'],
         ],
     ],
 ];
