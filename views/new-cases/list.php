@@ -1,10 +1,10 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: david
- * Date: 2016/12/7
+ * User: zhushuangwen
+ * Date: 2018/09/20
  * Time: 10:55
- * Email:liyongsheng@meicai.cn
+ * Email:zhushuangwen@sina.cn
  */
 
 /* @var $this yii\web\View */
@@ -12,7 +12,7 @@
 use yii\widgets\ListView;
 use yii\bootstrap\Html;
 
-$this->title = '产品';
+$this->title = '案例';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="col-lg-9">
                 <div class="panel panel-default panel-<?=\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')?>">
-                    <div class="panel-heading" style="border-bottom: none;"><h3 class="panel-title">产品中心</h3></div>
+                    <div class="panel-heading" style="border-bottom: none;"><h3 class="panel-title">案例中心</h3></div>
                 </div>
                 <div>
                     <?= ListView::widget([
@@ -53,15 +53,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
             <div class="col-lg-3">
-                <?=\app\widgets\Category::widget(['type'=>\app\models\Content::TYPE_PRODUCTS,
+                <?=\app\widgets\Cases::widget(['type'=>\app\models\Content::TYPE_NEW_CASE,
                     'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>
-                <?=\app\widgets\Cases::widget(['type'=>\app\models\Content::TYPE_NEW_CASE,
-                                               'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
-                                              ])?>
+                <?=\app\widgets\Category::widget(['type'=>\app\models\Content::TYPE_PRODUCTS,
+                                                  'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
+                                                 ])?>
                 <?=\app\widgets\LastNews::widget(['options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>
-
                 <?=\app\widgets\ConfigPanel::widget(['configName'=>'contact_us',
                     'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>

@@ -40,6 +40,9 @@ class Content extends AppActiveRecord
     /** 案例 */
     const TYPE_CASE =5;
 
+    /** 新版案例(带图片) */
+    const TYPE_NEW_CASE =6;
+
     /** @var array  */
     static public $types = [
         self::TYPE_NEWS=>'新闻',
@@ -47,6 +50,7 @@ class Content extends AppActiveRecord
         self::TYPE_DOWNLOADS=>'下载',
         self::TYPE_PHOTOS=>'照片',
         self::TYPE_CASE=>'案例',
+        self::TYPE_NEW_CASE=>'案例',
     ];
 
     /**
@@ -116,11 +120,13 @@ class Content extends AppActiveRecord
      * 类型常量对应的字符串常量
      * @var array
      */
+    //与前端构建Url跳转有关，默认yii框架进行拆分controller时候，名字大小写转换，aaa-bbb被转换为aaaBbbController
     static public $typeStrings = [
         self::TYPE_NEWS=>'news',
         self::TYPE_PRODUCTS=>'products',
         self::TYPE_DOWNLOADS=>'downloads',
         self::TYPE_PHOTOS=>'photos',
+        self::TYPE_NEW_CASE=>'new-cases',
     ];
 
     /**

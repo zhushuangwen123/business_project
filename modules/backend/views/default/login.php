@@ -36,9 +36,9 @@ $fieldOptions2 = [
             'enableClientValidation' => false,
         ]); ?>
 
-        <?= $form->field($model, 'username', $fieldOptions1)->label(false)->textInput(['autofocus' => true]) ?>
+        <?= $form->field($model, 'username', $fieldOptions1)->label('用户名:')->textInput(['autofocus' => true]) ?>
 
-        <?= $form->field($model, 'password', $fieldOptions2)->label(false)->passwordInput() ?>
+        <?= $form->field($model, 'password', $fieldOptions2)->label('密码:')->passwordInput() ?>
 
         <div class="row">
             <div class="col-xs-8">

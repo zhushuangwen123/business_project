@@ -50,6 +50,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 ])?>
                 <?=\app\widgets\LastNews::widget(['options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>
+                <?=\app\widgets\Category::widget(['type'=>\app\models\Content::TYPE_PRODUCTS,
+                                                  'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
+                                                 ])?>
+                <?=\app\widgets\Cases::widget(['type'=>\app\models\Content::TYPE_NEW_CASE,
+                                               'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
+                                              ])?>
                 <?=\app\widgets\ConfigPanel::widget(['configName'=>'contact_us',
                     'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>

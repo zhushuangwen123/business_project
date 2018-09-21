@@ -1,10 +1,10 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: david
- * Date: 2016/12/7
- * Time: 10:55
- * Email:liyongsheng@meicai.cn
+ * User: zhushuangwen
+ * Date: 2018/09/20
+ * Time: 22:00
+ * Email:zhushuangwen@sina.cn
  */
 
 /* @var $this yii\web\View */
@@ -14,7 +14,7 @@ use app\widgets\LastNews;
 use app\widgets\ConfigPanel;
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label'=>'产品', 'url'=>['/products/list']];
+$this->params['breadcrumbs'][] = ['label'=>'案例', 'url'=>['/new-cases/list']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
@@ -67,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
 
                 <div class="panel panel-default panel-<?=\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')?>" style="margin-top: 20px">
-                    <div class="panel-heading" style="border-bottom: none;"><h3 class="panel-title">产品详情</h3></div>
+                    <div class="panel-heading" style="border-bottom: none;"><h3 class="panel-title">案例详情</h3></div>
                 </div>
 
                 <div class="panel-body">
@@ -80,22 +80,22 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <div class="col-lg-9 text-right">
                             <?php if($previous = $model->previous()):?>
-                                上一条 <?=Html::a($previous->title, ['/products/item', 'id'=>$previous->id])?>
+                                上一条 <?=Html::a($previous->title, ['/new-cases/item', 'id'=>$previous->id])?>
                             <?php endif;?>
                             <?php if($next = $model->next()):?>
-                                下一条 <?=Html::a($next->title, ['/products/item', 'id'=>$next->id])?>
+                                下一条 <?=Html::a($next->title, ['/new-cases/item', 'id'=>$next->id])?>
                             <?php endif;?>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
-                <?=\app\widgets\Category::widget(['type'=>\app\models\Content::TYPE_PRODUCTS,
-                    'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
-                ])?>
                 <?=\app\widgets\Cases::widget(['type'=>\app\models\Content::TYPE_NEW_CASE,
                                                'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                                               ])?>
+                <?=\app\widgets\Category::widget(['type'=>\app\models\Content::TYPE_PRODUCTS,
+                                                  'options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
+                                                 ])?>
                 <?=\app\widgets\LastNews::widget(['options'=>['class'=>'panel panel-default panel-'.\yii\helpers\ArrayHelper::getValue($this->params,'themeColor')]
                 ])?>
                 <?=\app\widgets\ConfigPanel::widget(['configName'=>'contact_us',
